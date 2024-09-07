@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">The NewYork Times</string>
+    <string name="title">The NewYork Times</string>
+    <string name="loading">Loading Articles.......</string>
+</resources>
