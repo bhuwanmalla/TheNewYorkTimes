@@ -4,17 +4,17 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import bhuwan.example.thenewyorktimes.models.ArticlesModel
+import bhuwan.TopStoriesModel
 import bhuwan.example.thenewyorktimes.repository.NewYorkTimesRepository
 import kotlinx.coroutines.launch
 
-class ArticlesViewModel : ViewModel() {
+class TopStoriesViewModel : ViewModel() {
 
     private val repository = NewYorkTimesRepository()
 
-    private val _articles = MutableLiveData<ArticlesModel>()
-    val articles: LiveData<ArticlesModel>
-        get() = _articles
+    private val _topStories = MutableLiveData<TopStoriesModel>()
+    val topStories: LiveData<TopStoriesModel>
+        get() = _topStories
 
     private val _isLoading = MutableLiveData<Boolean>(false)
     val isLoading: LiveData<Boolean>
@@ -22,15 +22,15 @@ class ArticlesViewModel : ViewModel() {
 
 
     init {
-        fetchedData()
+        fetchStories()
     }
 
-    fun fetchedData() {
+    fun fetchStories() {
         viewModelScope.launch {
             _isLoading.value = true
             try {
-                val fetchedArticles = repository.fetchArticles()
-                _articles.value = fetchedArticles
+                val fetchedStories = repository.fetchTopStories()
+                _topStories.value = fetchedStories
             } catch (e: Exception) {
                 e.message
             } finally {
@@ -38,4 +38,5 @@ class ArticlesViewModel : ViewModel() {
             }
         }
     }
+
 }

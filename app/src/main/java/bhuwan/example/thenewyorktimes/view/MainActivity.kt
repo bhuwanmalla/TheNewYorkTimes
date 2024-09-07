@@ -1,5 +1,6 @@
 package bhuwan.example.thenewyorktimes.view
 
+import android.content.pm.ActivityInfo
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
@@ -18,6 +19,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
 
+        requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
+
         currentFragment(ArticlesFragment())
 
         binding.bottomNavigationView.setOnItemSelectedListener {
@@ -29,7 +32,6 @@ class MainActivity : AppCompatActivity() {
             }
             true
         }
-
     }
 
     private fun currentFragment(fragment: Fragment) {
