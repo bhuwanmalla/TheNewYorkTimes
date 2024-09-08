@@ -6,11 +6,12 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import bhuwan.TopStoriesModel
 import bhuwan.example.thenewyorktimes.repository.NewYorkTimesRepository
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
+import javax.inject.Inject
 
-class TopStoriesViewModel : ViewModel() {
-
-    private val repository = NewYorkTimesRepository()
+@HiltViewModel
+class TopStoriesViewModel @Inject constructor(private val repository: NewYorkTimesRepository) : ViewModel() {
 
     private val _topStories = MutableLiveData<TopStoriesModel>()
     val topStories: LiveData<TopStoriesModel>

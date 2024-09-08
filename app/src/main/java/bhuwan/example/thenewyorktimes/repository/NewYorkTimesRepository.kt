@@ -2,13 +2,13 @@ package bhuwan.example.thenewyorktimes.repository
 
 import bhuwan.TopStoriesModel
 import bhuwan.example.thenewyorktimes.Retrofit.RetrofitBuilder
+import bhuwan.example.thenewyorktimes.api_service.ApiService
 import bhuwan.example.thenewyorktimes.models.ArticlesModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
+import javax.inject.Inject
 
-class NewYorkTimesRepository {
-
-    private val apiService = RetrofitBuilder.api
+class NewYorkTimesRepository @Inject constructor(private val apiService: ApiService) {
 
     suspend fun fetchArticles(): ArticlesModel {
         return withContext(Dispatchers.IO) {

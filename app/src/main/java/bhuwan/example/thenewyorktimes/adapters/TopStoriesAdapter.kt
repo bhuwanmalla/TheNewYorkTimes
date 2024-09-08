@@ -63,9 +63,6 @@ class TopStoriesAdapter(
                     context.startActivity(intent)
                 }
             }
-
         }
-
     }
-
 }

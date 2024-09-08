@@ -31,7 +31,6 @@ class ArticlesAdapter(
         holder.bind(articles[position])
     }
 
-
     inner class ArticlesViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         private val image: ImageView = itemView.findViewById(R.id.imageView)
         private val leadParagraphTv: TextView = itemView.findViewById(R.id.leadParagraphTV)

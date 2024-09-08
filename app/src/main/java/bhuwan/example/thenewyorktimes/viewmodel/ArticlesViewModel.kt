@@ -6,11 +6,13 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import bhuwan.example.thenewyorktimes.models.ArticlesModel
 import bhuwan.example.thenewyorktimes.repository.NewYorkTimesRepository
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
+import javax.inject.Inject
 
-class ArticlesViewModel : ViewModel() {
-
-    private val repository = NewYorkTimesRepository()
+@HiltViewModel
+class ArticlesViewModel @Inject constructor(private val repository: NewYorkTimesRepository) :
+    ViewModel() {
 
     private val _articles = MutableLiveData<ArticlesModel>()
     val articles: LiveData<ArticlesModel>

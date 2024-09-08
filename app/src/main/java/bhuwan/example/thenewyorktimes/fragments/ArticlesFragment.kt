@@ -13,8 +13,9 @@ import bhuwan.example.thenewyorktimes.databinding.FragmentArticlesBinding.inflat
 import bhuwan.example.thenewyorktimes.databinding.FragmentArticlesBinding
 import bhuwan.example.thenewyorktimes.models.Doc
 import bhuwan.example.thenewyorktimes.viewmodel.ArticlesViewModel
+import dagger.hilt.android.AndroidEntryPoint
 
-
+@AndroidEntryPoint
 class ArticlesFragment : Fragment() {
 
     private lateinit var binding: FragmentArticlesBinding

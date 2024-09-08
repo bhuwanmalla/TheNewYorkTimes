@@ -1,6 +1,8 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
+    id("kotlin-kapt")
+    id("com.google.dagger.hilt.android")
 }
 
 android {
@@ -60,9 +62,14 @@ dependencies {
     // ViewModel -- LiveData
     implementation("androidx.lifecycle:lifecycle-viewmodel:2.8.5")
     implementation("androidx.lifecycle:lifecycle-livedata:2.8.5")
+    implementation ("androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.5")
 
     // Glide
     implementation("com.github.bumptech.glide:glide:4.16.0")
+
+    // HILT Dagger
+    implementation("com.google.dagger:hilt-android:2.52")
+    kapt("com.google.dagger:hilt-android-compiler:2.52")
 
 
 }

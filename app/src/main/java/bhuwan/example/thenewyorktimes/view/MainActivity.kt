@@ -8,7 +8,9 @@ import bhuwan.example.thenewyorktimes.R
 import bhuwan.example.thenewyorktimes.databinding.ActivityMainBinding
 import bhuwan.example.thenewyorktimes.fragments.ArticlesFragment
 import bhuwan.example.thenewyorktimes.fragments.TopStoriesFragment
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
 
     lateinit var binding: ActivityMainBinding
