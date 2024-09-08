@@ -1,6 +1,6 @@
 # The New York Times
 
-This is an Android application developed in Kotlin using the MVVM (Model-View-ViewModel) architecture. The app fetches data from an external API and displays it in a clean and user-friendly interface.
+This is an Android application developed in Kotlin using the MVVM (Model-View-ViewModel) architecture with Hilt-Dagger for dependency injection. The app fetches data from an external API and displays it in a clean and user-friendly interface.
 
 ## App's Interface
 
@@ -18,6 +18,7 @@ The following images showcase the Articles Screen and Top Stories Screen of the 
 - Developed using **Kotlin** programming language.
 - Follows **MVVM Architecture** for clean and maintainable code.
 - Uses **Retrofit** for networking.
+- Implements **Hilt-Dagger** for dependency injection.
 - Fetches data from an external API and displays it to the user.
 
 
@@ -26,6 +27,7 @@ The following images showcase the Articles Screen and Top Stories Screen of the 
 - **Language**: Kotlin
 - **Architecture**: MVVM (Model-View-ViewModel)
 - **Network Requests**: Retrofit
+- **Dependency Injection**: Hilt-Dagger
 - **LiveData** and **ViewModel** for UI interaction
 
 ## Installation
