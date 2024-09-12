@@ -7,9 +7,9 @@ This is an Android application developed in Kotlin using the MVVM (Model-View-Vi
 The following images showcase the Articles Screen and Top Stories Screen of the app:
 
 <div>
-<img src="https://github.com/bhuwanmalla/TheNewYorkTimes/blob/main/articles.png" width="300">
-<img src="https://github.com/bhuwanmalla/TheNewYorkTimes/blob/main/topstories.png" width="300">
-<img src="https://github.com/bhuwanmalla/TheNewYorkTimes/blob/main/webactivity.png" width="300">
+<img src="https://github.com/bhuwanmalla/TheNewYorkTimes/blob/main/articles.png" width="200">
+<img src="https://github.com/bhuwanmalla/TheNewYorkTimes/blob/main/topstories.png" width="200">
+<img src="https://github.com/bhuwanmalla/TheNewYorkTimes/blob/main/webactivity.png" width="200">
 </div>
 
 ## Features
